@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+    <form th:action="@{/create-user}" method="POST" th:object="${form}">
+        Username: <input type="text" name="username" th:field="*{username}"><br/>
+        Password: <input type="password" name="paswword" th:field="*{password}"><br/>
+        Zapisz: <input type="submit" value="zapisz">
+    </form>
+</body>
+</html>
